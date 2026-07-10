@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vektoryka — Projektowanie logo i identyfikacja wizualna</title>
+  <meta name="description"
+    content="Projektuję identyfikacje wizualne, logo i materiały brandingowe, które budują rozpoznawalność marki. Sprawdź portfolio i zamów projekt.">
+  <meta name="keywords" content="projektowanie logo, identyfikacja wizualna, branding, logo dla firmy, grafik logo">
+  <meta property="og:title" content="Vektoryka — Projektowanie logo i identyfikacja wizualna">
+  <meta property="og:description" content="Projektuję identyfikacje wizualne, logo i materiały brandingowe.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="materiały/Logo1.webp">
+  <link rel="icon" type="image/svg+xml" href="materiały/favicon.svg">
+  <script>document.documentElement.dataset.theme = localStorage.getItem('vek-theme') || 'dark'</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav class="nav">
+    <a href="#" class="nav-logo" aria-label="Vektoryka — strona główna">
+      <svg class="nav-logo-svg" viewBox="30 1095 2810 650" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <polygon class="lfb"
+          points="289.35 1715.22 110.18 1218.28 125.11 1212.9 294.37 1682.38 305.62 1667.57 496.96 1134.02 511.89 1139.38 319.73 1675.23 289.35 1715.22" />
+        <path class="lfa"
+          d="M66.33,1690.52c3.54-3.68-5.05-26.63-5.05-26.63l.99.25,309.35-500.58,9.96,27.39,225.15,336.63-13.97,9.34-224.6-335.81S62.79,1694.19,66.33,1690.52Z" />
+        <circle class="lfa" cx="368.56" cy="1181.75" r="42.61" />
+        <circle class="lfb" cx="118.13" cy="1212.18" r="34.58" />
+        <circle class="lfa" cx="65.17" cy="1683.7" r="32.99" />
+        <circle class="lfb" cx="299.41" cy="1692.95" r="37.62" />
+        <circle class="lfa" cx="590.86" cy="1532.98" r="32.69" />
+        <circle class="lfb" cx="501.02" cy="1138.53" r="34.45" />
+        <circle class="lfa" cx="203.9" cy="1450.44" r="43.28" />
+        <text class="lfa" font-family="Anta, sans-serif" font-size="439.42" transform="translate(721.22 1577.38)">
+          <tspan letter-spacing="-.03em" x="0" y="0">V</tspan>
+          <tspan letter-spacing="0" x="277" y="0">ektory</tspan>
+          <tspan letter-spacing="-.02em" x="1595.26" y="0">k</tspan>
+          <tspan x="1827.63" y="0">a</tspan>
+        </text>
+      </svg>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#o-mnie">O mnie</a></li>
+      <li><a href="#portfolio">Realizacje</a></li>
+      <li><a href="#proces">Proces</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Przełącz motyw">
+        <svg class="icon-sun" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Dostępny do współpracy
+        </p>
+        <h1 class="hero-title">Vektoryka</h1>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <p class="hero-lead">Projektuję identyfikacje wizualne, logo i materiały brandingowe, które budują
+          rozpoznawalność marki.</p>
+        <div class="hero-ctas">
+          <a href="#portfolio" class="btn btn-outline">Zobacz portfolio &nbsp;→</a>
+          <a href="#kontakt" data-tel="+48778730197" class="btn btn-ghost">Zamów projekt</a>
+        </div>
+      </div>
+      <p class="hero-scroll" aria-hidden="true">Scroll</p>
+    </section>
+
+    <section id="o-mnie">
+      <div class="container">
+        <div class="om-photo reveal">
+          <img src="materiały/leP.webp" alt="Mateusz — projektant graficzny" width="720" height="900"
+            loading="lazy" decoding="async">
+        </div>
+        <div class="om-body">
+          <div class="reveal">
+            <p class="sec-label">O mnie</p>
+            <h2>Tworzę przemyślane projekty,<br>które łączą estetykę z funkcją.</h2>
+          </div>
+          <div class="om-text reveal">
+            <p>Nazywam się Mateusz i od ponad 4 lat zajmuję się projektowaniem graficznym oraz tworzeniem spójnych
+              identyfikacji wizualnych dla firm. Projektuję logo, opracowuję branding oraz przygotowuję materiały
+              graficzne wspierające wizerunek i komunikację biznesową.</p>
+            <p>Specjalizuję się w kompleksowym projektowaniu graficznym – od koncepcji i strategii wizualnej, przez
+              projekt logo, aż po materiały reklamowe, grafiki do mediów społecznościowych i inne elementy identyfikacji
+              marki.</p>
+            <p>W swojej pracy stawiam na przejrzystą współpracę, sprawną komunikację oraz indywidualne podejście do
+              każdego projektu.</p>
+            <p>Wszystkie realizacje tworzę od podstaw, dzięki czemu są dopasowane do charakteru marki, jej wartości oraz
+              potrzeb odbiorców.</p>
+          </div>
+          <div class="reveal">
+            <a href="analiza.html" class="btn btn-outline">Zacznijmy współpracę &nbsp;→</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="sec">
+      <div class="container">
+        <div class="sec-head reveal">
+          <div>
+            <p class="sec-label">Portfolio</p>
+            <h2>Wybrane realizacje</h2>
+          </div>
+        </div>
+        <div class="portfolio-grid">
+
+          <div class="p-card reveal" data-title="AXON" data-shot-desktop="materiały/identyfikacje-web/axon-desktop.png" data-shot-mobile="materiały/identyfikacje-web/axon-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/axon-dark.svg" alt="Logo AXON" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/axon-light.svg" alt="Logo AXON" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">01</span>
+                <p class="p-name">AXON</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="BOSPA" data-shot-desktop="materiały/identyfikacje-web/bospa-desktop.png" data-shot-mobile="materiały/identyfikacje-web/bospa-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/bospa-dark.svg" alt="Logo BOSPA" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/bospa-light.svg" alt="Logo BOSPA" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">02</span>
+                <p class="p-name">BOSPA</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="CyberBoost" data-shot-desktop="materiały/identyfikacje-web/cyberboost-desktop.png" data-shot-mobile="materiały/identyfikacje-web/cyberboost-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/cyberboost-dark.svg" alt="Logo CyberBoost" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/cyberboost-light.svg" alt="Logo CyberBoost" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">03</span>
+                <p class="p-name">CyberBoost</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="ememte" data-shot-desktop="materiały/identyfikacje-web/ememte-desktop.png" data-shot-mobile="materiały/identyfikacje-web/ememte-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/ememte-dark.svg" alt="Logo ememte" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/ememte-light.svg" alt="Logo ememte" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">04</span>
+                <p class="p-name">ememte</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="FM Invest" data-shot-desktop="materiały/identyfikacje-web/fm-invest-desktop.png" data-shot-mobile="materiały/identyfikacje-web/fm-invest-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/fm-invest-dark.svg" alt="Logo FM Invest" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/fm-invest-light.svg" alt="Logo FM Invest" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">05</span>
+                <p class="p-name">FM Invest</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="MM-Meble" data-shot-desktop="materiały/identyfikacje-web/mm-meble-desktop.png" data-shot-mobile="materiały/identyfikacje-web/mm-meble-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/mm-meble-dark.svg" alt="Logo MM-Meble" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/mm-meble-light.svg" alt="Logo MM-Meble" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">06</span>
+                <p class="p-name">MM-Meble</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="Novara" data-shot-desktop="materiały/identyfikacje-web/novara-desktop.png" data-shot-mobile="materiały/identyfikacje-web/novara-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/novara-dark.svg" alt="Logo Novara" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/novara-light.svg" alt="Logo Novara" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">07</span>
+                <p class="p-name">Novara</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="Sevix" data-shot-desktop="materiały/identyfikacje-web/sevix-desktop.png" data-shot-mobile="materiały/identyfikacje-web/sevix-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/sevix-dark.svg" alt="Logo Sevix" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/sevix-light.svg" alt="Logo Sevix" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">08</span>
+                <p class="p-name">Sevix</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="Sport Szkolny" data-shot-desktop="materiały/identyfikacje-web/sport-szkolny-desktop.png" data-shot-mobile="materiały/identyfikacje-web/sport-szkolny-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/sport-szkolny-dark.svg" alt="Logo Sport Szkolny" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/sport-szkolny-light.svg" alt="Logo Sport Szkolny" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">09</span>
+                <p class="p-name">Sport Szkolny</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="Sztuka Paznokcia i Makijażu" data-shot-desktop="materiały/identyfikacje-web/sztuka-paznokcia-desktop.png" data-shot-mobile="materiały/identyfikacje-web/sztuka-paznokcia-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/sztuka-paznokcia-dark.svg" alt="Logo Sztuka Paznokcia i Makijażu" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/sztuka-paznokcia-light.svg" alt="Logo Sztuka Paznokcia i Makijażu" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">10</span>
+                <p class="p-name">Sztuka Paznokcia i Makijażu</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="Vortex" data-shot-desktop="materiały/identyfikacje-web/vortex-desktop.png" data-shot-mobile="materiały/identyfikacje-web/vortex-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/vortex-dark.svg" alt="Logo Vortex" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/vortex-light.svg" alt="Logo Vortex" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">11</span>
+                <p class="p-name">Vortex</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="W mazurskim gaju" data-shot-desktop="materiały/identyfikacje-web/w-mazurskim-gaju-desktop.png" data-shot-mobile="materiały/identyfikacje-web/w-mazurskim-gaju-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/w-mazurskim-gaju-dark.svg" alt="Logo W mazurskim gaju" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/w-mazurskim-gaju-light.svg" alt="Logo W mazurskim gaju" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">12</span>
+                <p class="p-name">W mazurskim gaju</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+          <div class="p-card reveal" data-title="Wesołe stadko" data-shot-desktop="materiały/identyfikacje-web/wesole-stadko-desktop.png" data-shot-mobile="materiały/identyfikacje-web/wesole-stadko-mobile.png">
+            <div class="p-card-img">
+              <img class="logo-dark" src="materiały/realizacje/wesole-stadko-dark.svg" alt="Logo Wesołe stadko" loading="lazy">
+              <img class="logo-light" src="materiały/realizacje/wesole-stadko-light.svg" alt="Logo Wesołe stadko" loading="lazy">
+            </div>
+            <div class="p-card-foot">
+              <div class="p-meta">
+                <span class="p-num">13</span>
+                <p class="p-name">Wesołe stadko</p>
+                <p class="p-cat">Identyfikacja wizualna</p>
+              </div>
+              <span class="p-arrow" aria-hidden="true">→</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="proces" class="sec">
+      <div class="container">
+        <p class="sec-label reveal">Proces</p>
+        <h2 class="reveal">Jak wygląda współpraca</h2>
+        <div class="proces-line">
+          <div class="p-step reveal">
+            <div class="p-step-dot" aria-hidden="true"></div>
+            <div class="p-step-body">
+              <h4>Brief</h4>
+              <p>Poznaję Twoje potrzeby i cele marki.</p>
+            </div>
+          </div>
+          <div class="p-step reveal">
+            <div class="p-step-dot" aria-hidden="true"></div>
+            <div class="p-step-body">
+              <h4>Analiza</h4>
+              <p>Analizuję rynek, konkurencję i grupę docelową.</p>
+            </div>
+          </div>
+          <div class="p-step reveal">
+            <div class="p-step-dot" aria-hidden="true"></div>
+            <div class="p-step-body">
+              <h4>Koncepcje</h4>
+              <p>Tworzę koncepcje i kierunki wizualne.</p>
+            </div>
+          </div>
+          <div class="p-step reveal">
+            <div class="p-step-dot" aria-hidden="true"></div>
+            <div class="p-step-body">
+              <h4>Dopracowanie</h4>
+              <p>Dopracowuję wybraną koncepcję.</p>
+            </div>
+          </div>
+          <div class="p-step reveal">
+            <div class="p-step-dot" aria-hidden="true"></div>
+            <div class="p-step-body">
+              <h4>Finalizacja</h4>
+              <p>Przekazuję gotowe materiały.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="analiza-banner">
+      <div class="analiza-inner reveal">
+        <div class="analiza-body">
+          <div class="analiza-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+            </svg>
+          </div>
+          <div class="analiza-text">
+            <h3>Zaprojektuj swoje logo</h3>
+            <p>Przejdź przez krótki brief, a na jego podstawie przygotuję indywidualną analizę i wycenę projektu logo.
+            </p>
+          </div>
+        </div>
+        <a href="analiza.html" class="btn btn-filled">Rozpocznij analizę &nbsp;→</a>
+      </div>
+    </div>
+
+    <div class="seo-block">
+      <div class="container reveal">
+        <p>Profesjonalne logo to fundament każdej marki — pierwszy kontakt klienta z Twoją firmą. Projektuję znaki
+          graficzne, które nie tylko wyglądają dobrze, ale przede wszystkim działają: są czytelne w każdej skali,
+          zapadają w pamięć i wyróżniają się na tle konkurencji. Pracuję zarówno z nowymi markami szukającymi swojego
+          głosu, jak i z firmami, które chcą odświeżyć swój wizerunek.</p>
+        <p>Każdy projekt rozpoczynam od głębokiego zrozumienia Twojej branży, grupy docelowej i wartości marki.
+          Identyfikacja wizualna to nie tylko logo — to spójny system, który obejmuje typografię, kolory i styl
+          graficzny. Jeśli szukasz projektanta logo, który traktuje Twój projekt poważnie — jesteś we właściwym miejscu.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="kontakt">
+    <div class="footer-grid">
+      <div>
+        <svg class="footer-logo-svg lfa" viewBox="37 1100 2797 570" xmlns="http://www.w3.org/2000/svg"
+          aria-label="Vektoryka">
+          <text font-family="Anta, sans-serif" font-size="572.98" transform="translate(37.5 1585.33)">
+            <tspan letter-spacing="-.02em" x="0" y="0">V</tspan>
+            <tspan letter-spacing="0" x="366.92" y="0">ektory</tspan>
+            <tspan letter-spacing="0" x="2120.23" y="0">k</tspan>
+            <tspan x="2428.95" y="0">a</tspan>
+          </text>
+        </svg>
+        <p class="footer-copy">© 2026 Vektoryka<br>Wszelkie prawa zastrzeżone.</p>
+      </div>
+      <div class="f-col">
+        <h5>Kontakt</h5>
+        <a href="tel:+48778730197">+48 778 730 197</a>
+        <a href="mailto:vektoryka@gmail.com">vektoryka@gmail.com</a>
+      </div>
+      <div class="f-col">
+        <h5>Znajdź mnie</h5>
+        <a href="https://www.facebook.com/vektoryka" target="_blank" rel="noopener">Facebook ↗</a>
+        <a href="https://www.instagram.com/vektoryka/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="https://www.behance.net/mateuszganobis" target="_blank" rel="noopener">Behance ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Projektowanie logo i identyfikacja wizualna — Vektoryka</p>
+      <span class="footer-v" aria-hidden="true">V</span>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd realizacji">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Zamknij">×</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

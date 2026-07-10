@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 992.13 992.13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #37a446;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M659.73,297.6h0v250.96h-41.5v-209.46c0-22.9,18.59-41.5,41.5-41.5Z" transform="translate(1389.97 270.41) rotate(135)"/>
+    <rect class="cls-1" x="460.51" y="335.08" width="41.5" height="196.05" transform="translate(447.21 -213.44) rotate(45)"/>
+    <path class="cls-1" d="M412.43,188.04h0c22.9,0,41.5,18.59,41.5,41.5v236.52h-41.5V188.04h0Z" transform="translate(358.13 -210.51) rotate(45)"/>
+  </g>
+  <g>
+    <path class="cls-2" d="M373.82,443.79h0v250.76h-41.5v-209.26c0-22.9,18.59-41.5,41.5-41.5Z" transform="translate(-299.05 416.37) rotate(-45)"/>
+    <path class="cls-2" d="M538.15,526.07h0c22.9,0,41.5,18.59,41.5,41.5v236.52h-41.5v-278.02h0Z" transform="translate(483.81 1530.56) rotate(-135)"/>
+    <rect class="cls-2" x="490.17" y="461.12" width="41.5" height="196.05" transform="translate(476.82 1315.79) rotate(-135)"/>
+  </g>
+</svg>

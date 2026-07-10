@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analiza oczekiwań — Vektoryka</title>
+  <meta name="description" content="Wypełnij brief i otrzymaj indywidualną wycenę projektu logo. Vektoryka — projektowanie logo i identyfikacja wizualna.">
+  <link rel="icon" type="image/svg+xml" href="materiały/favicon.svg">
+  <script>document.documentElement.dataset.theme=localStorage.getItem('vek-theme')||'dark'</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo" aria-label="Vektoryka — strona główna">
+    <svg class="nav-logo-svg" viewBox="30 1095 2810 650" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <polygon class="lfb" points="289.35 1715.22 110.18 1218.28 125.11 1212.9 294.37 1682.38 305.62 1667.57 496.96 1134.02 511.89 1139.38 319.73 1675.23 289.35 1715.22"/>
+      <path class="lfa" d="M66.33,1690.52c3.54-3.68-5.05-26.63-5.05-26.63l.99.25,309.35-500.58,9.96,27.39,225.15,336.63-13.97,9.34-224.6-335.81S62.79,1694.19,66.33,1690.52Z"/>
+      <circle class="lfa" cx="368.56" cy="1181.75" r="42.61"/>
+      <circle class="lfb" cx="118.13" cy="1212.18" r="34.58"/>
+      <circle class="lfa" cx="65.17"  cy="1683.7"  r="32.99"/>
+      <circle class="lfb" cx="299.41" cy="1692.95" r="37.62"/>
+      <circle class="lfa" cx="590.86" cy="1532.98" r="32.69"/>
+      <circle class="lfb" cx="501.02" cy="1138.53" r="34.45"/>
+      <circle class="lfa" cx="203.9"  cy="1450.44" r="43.28"/>
+      <text class="lfa" font-family="Anta, sans-serif" font-size="439.42" transform="translate(721.22 1577.38)">
+        <tspan letter-spacing="-.03em" x="0"       y="0">V</tspan>
+        <tspan letter-spacing="0"      x="277"     y="0">ektory</tspan>
+        <tspan letter-spacing="-.02em" x="1595.26" y="0">k</tspan>
+        <tspan                         x="1827.63" y="0">a</tspan>
+      </text>
+    </svg>
+  </a>
+
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="index.html#proces">Proces</a></li>
+    <li><a href="index.html#o-mnie">O mnie</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Przełącz motyw">
+      <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Otwórz menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+  <div class="page-hero">
+    <p class="sec-label">Analiza oczekiwań</p>
+    <h1>Zaprojektuj swoje logo</h1>
+    <p>Wypełnij poniższy brief — im więcej wiesz o swojej marce, tym lepiej dopasuję projekt. Na podstawie Twoich odpowiedzi przygotuję indywidualną analizę i wycenę.</p>
+  </div>
+
+  <div class="form-wrap">
+
+    <form id="analizaForm" action="https://formspree.io/f/mrevwkpa" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Nowa analiza oczekiwań — Vektoryka">
+      <input type="text"   name="_gotcha"  style="display:none">
+
+      <div class="f-group">
+        <label for="marka">Nazwa Twojej marki <span class="f-req">*</span></label>
+        <input class="f-input" type="text" id="marka" name="marka" placeholder="np. Firma XYZ" required>
+        <p class="f-error" id="marka-err">To pole jest wymagane.</p>
+      </div>
+
+      <div class="f-group">
+        <label for="opis">Czym zajmuje się Twoja firma? <span class="f-req">*</span></label>
+        <p class="f-hint">Czym się zajmujesz, co sprzedajesz, co robisz.</p>
+        <textarea class="f-textarea" id="opis" name="opis" placeholder="Opisz swoją działalność..." required></textarea>
+        <p class="f-error" id="opis-err">To pole jest wymagane.</p>
+      </div>
+
+      <div class="f-group">
+        <label>Do kogo kierujesz swoją ofertę? <span class="f-req">*</span></label>
+        <div class="f-options">
+          <label class="f-option"><input type="checkbox" name="grupa[]" value="mlodzi"> Młodzi ludzie</label>
+          <label class="f-option"><input type="checkbox" name="grupa[]" value="premium"> Klienci premium</label>
+          <label class="f-option"><input type="checkbox" name="grupa[]" value="firmy"> Firmy</label>
+          <label class="f-option"><input type="checkbox" name="grupa[]" value="lokalne"> Lokalne / regionalne</label>
+          <label class="f-option"><input type="checkbox" name="grupa[]" value="globalne"> Globalne / szeroki zasięg</label>
+          <label class="f-option"><input type="checkbox" name="grupa[]" value="inne"> Inne</label>
+        </div>
+      </div>
+
+      <div class="f-group">
+        <label>Jak klimat ma mieć logo? <span class="f-req">*</span></label>
+        <div class="f-options">
+          <label class="f-option"><input type="radio" name="klimat" value="nowoczesny" required> Nowoczesny</label>
+          <label class="f-option"><input type="radio" name="klimat" value="klasyczny"> Klasyczny</label>
+          <label class="f-option"><input type="radio" name="klimat" value="elegancki"> Elegancki</label>
+          <label class="f-option"><input type="radio" name="klimat" value="minimalistyczny"> Minimalistyczny</label>
+        </div>
+        <p class="f-error" id="klimat-err">To pole jest wymagane.</p>
+      </div>
+
+      <div class="f-group">
+        <label>Styl graficzny, który czujesz najbardziej <span class="f-req">*</span></label>
+        <div class="f-options">
+          <label class="f-option"><input type="radio" name="styl" value="klasyczny" required> Klasyczny (herbowy + kształty)</label>
+          <label class="f-option"><input type="radio" name="styl" value="typograficzny"> Typograficzny (sam napis)</label>
+          <label class="f-option"><input type="radio" name="styl" value="geometryczny"> Geometryczny (złożony z kształtów)</label>
+          <label class="f-option"><input type="radio" name="styl" value="abstrakcyjny"> Abstrakcyjny (skupiony na symbolu)</label>
+        </div>
+        <p class="f-error" id="styl-err">To pole jest wymagane.</p>
+      </div>
+
+      <div class="f-group">
+        <label>Kolory — masz jakieś preferencje? <span class="f-req">*</span></label>
+        <div class="f-options">
+          <label class="f-option"><input type="radio" name="kolory" value="jasne" required> Jasne / pastelowe</label>
+          <label class="f-option"><input type="radio" name="kolory" value="ciemne"> Ciemne / stonowane</label>
+          <label class="f-option"><input type="radio" name="kolory" value="kolorowe"> Kolorowe i żywe</label>
+          <label class="f-option"><input type="radio" name="kolory" value="brak"> Brak preferencji — zostawiam Ci dobór</label>
+          <label class="f-option"><input type="radio" name="kolory" value="inne"> Inne</label>
+        </div>
+        <p class="f-error" id="kolory-err">To pole jest wymagane.</p>
+      </div>
+
+      <div class="f-group">
+        <label>Font — która czcionka najbardziej Ci odpowiada? <span class="f-req">*</span></label>
+        <div class="f-options">
+          <label class="f-option"><input type="radio" name="font" value="bezszeryfowy-cienki" required> Bezszeryfowy — cienki (np. Gill Sans, Futura Light)</label>
+          <label class="f-option"><input type="radio" name="font" value="bezszeryfowy-gruby"> Bezszeryfowy — gruby (np. Futura Bold, Gotham)</label>
+          <label class="f-option"><input type="radio" name="font" value="szeryfowy-cienki"> Szeryfowy — cienki (np. Garamond, Didot)</label>
+          <label class="f-option"><input type="radio" name="font" value="szeryfowy-gruby"> Szeryfowy — gruby (np. Rockwell, Clarendon)</label>
+          <label class="f-option"><input type="radio" name="font" value="reczny"> Ręczny / kaligraficzny</label>
+        </div>
+        <p class="f-error" id="font-err">To pole jest wymagane.</p>
+      </div>
+
+      <div class="f-group">
+        <label for="nie_chce">Czego zdecydowanie NIE chcesz w logo? <span class="f-req">*</span></label>
+        <p class="f-hint">np. konkretne kolory, symbole, styl</p>
+        <textarea class="f-textarea" id="nie_chce" name="nie_chce" placeholder="Opisz czego chcesz uniknąć..." required></textarea>
+        <p class="f-error" id="nie_chce-err">To pole jest wymagane.</p>
+      </div>
+
+      <div class="f-group">
+        <label>Czy logo ma zawierać jakiś symbol / ikonę? <span class="f-req">*</span></label>
+        <div class="f-options">
+          <label class="f-option"><input type="radio" name="symbol" value="tak"      id="symbolTak" required> Tak</label>
+          <label class="f-option"><input type="radio" name="symbol" value="nie"> Nie</label>
+          <label class="f-option"><input type="radio" name="symbol" value="nie_wiem"> Nie mam zdania</label>
+        </div>
+        <p class="f-error" id="symbol-err">To pole jest wymagane.</p>
+        <div class="f-conditional" id="symbolGroup">
+          <label for="symbol_opis">Jaki symbol / ikona?</label>
+          <p class="f-hint">Opisz lub podaj przykład.</p>
+          <textarea class="f-textarea" id="symbol_opis" name="symbol_opis" placeholder="np. sylwetka psa, litera M, korona..."></textarea>
+        </div>
+      </div>
+
+      <div class="f-group">
+        <label>Gdzie logo będzie najczęściej używane? <span class="f-req">*</span></label>
+        <div class="f-options">
+          <label class="f-option"><input type="checkbox" name="uzycie[]" value="www"> Strona WWW</label>
+          <label class="f-option"><input type="checkbox" name="uzycie[]" value="social"> Social media</label>
+          <label class="f-option"><input type="checkbox" name="uzycie[]" value="druk"> Wizytówki / druk</label>
+          <label class="f-option"><input type="checkbox" name="uzycie[]" value="inne"> Inne</label>
+        </div>
+      </div>
+
+      <div class="f-submit-wrap">
+        <button type="submit" class="btn btn-filled" id="submitBtn">Wyślij analizę &nbsp;→</button>
+      </div>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      <h3>Dziękuję!</h3>
+      <p>Twoja analiza dotarła. Odezwę się w ciągu 1–2 dni roboczych<br>z wyceną i propozycją kolejnych kroków.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer id="kontakt">
+  <div class="footer-grid">
+    <div>
+      <svg class="footer-logo-svg lfa" viewBox="37 1100 2797 570" xmlns="http://www.w3.org/2000/svg" aria-label="Vektoryka">
+        <text font-family="Anta, sans-serif" font-size="572.98" transform="translate(37.5 1585.33)">
+          <tspan letter-spacing="-.02em" x="0"       y="0">V</tspan>
+          <tspan letter-spacing="0"      x="366.92"  y="0">ektory</tspan>
+          <tspan letter-spacing="0"      x="2120.23" y="0">k</tspan>
+          <tspan                         x="2428.95" y="0">a</tspan>
+        </text>
+      </svg>
+      <p class="footer-copy">© 2026 Vektoryka<br>Wszelkie prawa zastrzeżone.</p>
+    </div>
+    <div class="f-col">
+      <h5>Kontakt</h5>
+      <a href="tel:+48778730197">+48 778 730 197</a>
+      <a href="mailto:vektoryka@gmail.com">vektoryka@gmail.com</a>
+    </div>
+    <div class="f-col">
+      <h5>Znajdź mnie</h5>
+      <a href="https://www.facebook.com/vektoryka"    target="_blank" rel="noopener">Facebook ↗</a>
+      <a href="https://www.instagram.com/vektoryka/"  target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://www.behance.net/mateuszganobis" target="_blank" rel="noopener">Behance ↗</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Projektowanie logo i identyfikacja wizualna — Vektoryka</p>
+    <span class="footer-v" aria-hidden="true">V</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
