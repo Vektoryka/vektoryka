@@ -1247,7 +1247,6 @@ footer {
   color: var(--text);
 }
 
-.f-option input[type="radio"],
 .f-option input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
@@ -1260,26 +1259,12 @@ footer {
   transition: border-color var(--transition);
 }
 
-[data-theme="light"] .f-option input[type="radio"],
 [data-theme="light"] .f-option input[type="checkbox"] {
   border-color: rgba(15, 27, 42, .3);
 }
 
-.f-option input[type="radio"] {
-  border-radius: 50%;
-}
-
-.f-option input[type="radio"]:checked,
 .f-option input[type="checkbox"]:checked {
   border-color: var(--accent);
-}
-
-.f-option input[type="radio"]:checked::after {
-  content: '';
-  position: absolute;
-  inset: 3px;
-  border-radius: 50%;
-  background: var(--accent);
 }
 
 .f-option input[type="checkbox"]:checked::after {
@@ -1287,33 +1272,6 @@ footer {
   position: absolute;
   inset: 2px;
   background: var(--accent);
-}
-
-.f-file-label {
-  display: inline-flex;
-  align-items: center;
-  gap: .6rem;
-  padding: .75rem 1.25rem;
-  border: 1px dashed var(--border);
-  font-size: .78rem;
-  color: var(--muted);
-  cursor: pointer;
-  transition: border-color var(--transition), color var(--transition);
-}
-
-.f-file-label:hover {
-  border-color: var(--accent);
-  color: var(--text);
-}
-
-.f-file-input {
-  display: none;
-}
-
-.f-file-name {
-  font-size: .72rem;
-  color: var(--muted);
-  margin-top: .5rem;
 }
 
 .f-hint {

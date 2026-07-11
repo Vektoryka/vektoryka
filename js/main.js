@@ -69,15 +69,12 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-const symbolGroup = document.getElementById('symbolGroup');
-document.querySelectorAll('[name="symbol"]').forEach(r => {
-  r.addEventListener('change', () => {
-    if (symbolGroup) symbolGroup.classList.toggle('visible', r.value === 'tak');
-  });
-});
-window.addEventListener('pageshow', () => {
-  const checked = document.querySelector('[name="symbol"]:checked');
-  if (symbolGroup) symbolGroup.classList.toggle('visible', checked?.value === 'tak');
+document.querySelectorAll('[data-reveal]').forEach(cb => {
+  const target = document.getElementById(cb.dataset.reveal);
+  if (!target) return;
+  const sync = () => target.classList.toggle('visible', cb.checked);
+  cb.addEventListener('change', sync);
+  window.addEventListener('pageshow', sync);
 });
 
 const form        = document.getElementById('analizaForm');
@@ -120,20 +117,12 @@ if (form) {
 
 function validateForm() {
   let valid = true;
-  ['marka', 'opis', 'nie_chce'].forEach(id => {
-    const el  = document.getElementById(id);
-    const err = document.getElementById(`${id}-err`);
-    if (!el) return;
+  form.querySelectorAll('[required]').forEach(el => {
+    const err = el.id ? document.getElementById(`${el.id}-err`) : null;
     const empty = !el.value.trim();
     el.classList.toggle('invalid', empty);
     if (err) err.classList.toggle('show', empty);
     if (empty) valid = false;
-  });
-  ['klimat', 'styl', 'kolory', 'font', 'symbol'].forEach(name => {
-    const checked = document.querySelector(`[name="${name}"]:checked`);
-    const err = document.getElementById(`${name}-err`);
-    if (err) err.classList.toggle('show', !checked);
-    if (!checked) valid = false;
   });
   if (!valid) {
     const firstErr = document.querySelector('.f-error.show');

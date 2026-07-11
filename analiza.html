@@ -64,114 +64,116 @@
   <div class="form-wrap">
 
     <form id="analizaForm" action="https://formspree.io/f/mrevwkpa" method="POST" novalidate>
-      <input type="hidden" name="_subject" value="Nowa analiza oczekiwań — Vektoryka">
+      <input type="hidden" name="_subject" value="Nowy brief do projektu logo — Vektoryka">
       <input type="text"   name="_gotcha"  style="display:none">
 
       <div class="f-group">
-        <label for="marka">Nazwa Twojej marki <span class="f-req">*</span></label>
+        <label for="marka">1. Nazwa marki <span class="f-req">*</span></label>
         <input class="f-input" type="text" id="marka" name="marka" placeholder="np. Firma XYZ" required>
         <p class="f-error" id="marka-err">To pole jest wymagane.</p>
       </div>
 
       <div class="f-group">
-        <label for="opis">Czym zajmuje się Twoja firma? <span class="f-req">*</span></label>
-        <p class="f-hint">Czym się zajmujesz, co sprzedajesz, co robisz.</p>
+        <label for="opis">2. Czym zajmuje się marka? <span class="f-req">*</span></label>
         <textarea class="f-textarea" id="opis" name="opis" placeholder="Opisz swoją działalność..." required></textarea>
         <p class="f-error" id="opis-err">To pole jest wymagane.</p>
       </div>
 
       <div class="f-group">
-        <label>Do kogo kierujesz swoją ofertę? <span class="f-req">*</span></label>
+        <label for="branza">3. W jakiej branży działa firma? <span class="f-req">*</span></label>
+        <input class="f-input" type="text" id="branza" name="branza" placeholder="np. gastronomia, budownictwo, uroda" required>
+        <p class="f-error" id="branza-err">To pole jest wymagane.</p>
+      </div>
+
+      <div class="f-group">
+        <label>4. Do kogo kierowana jest oferta?</label>
+        <p class="f-hint">Można zaznaczyć kilka odpowiedzi.</p>
         <div class="f-options">
-          <label class="f-option"><input type="checkbox" name="grupa[]" value="mlodzi"> Młodzi ludzie</label>
-          <label class="f-option"><input type="checkbox" name="grupa[]" value="premium"> Klienci premium</label>
-          <label class="f-option"><input type="checkbox" name="grupa[]" value="firmy"> Firmy</label>
-          <label class="f-option"><input type="checkbox" name="grupa[]" value="lokalne"> Lokalne / regionalne</label>
-          <label class="f-option"><input type="checkbox" name="grupa[]" value="globalne"> Globalne / szeroki zasięg</label>
-          <label class="f-option"><input type="checkbox" name="grupa[]" value="inne"> Inne</label>
+          <label class="f-option"><input type="checkbox" name="odbiorcy[]" value="Klienci indywidualni (B2C)"> Klienci indywidualni (B2C)</label>
+          <label class="f-option"><input type="checkbox" name="odbiorcy[]" value="Klienci biznesowi (B2B)"> Klienci biznesowi (B2B)</label>
+          <label class="f-option"><input type="checkbox" name="odbiorcy[]" value="Rynek lokalny"> Rynek lokalny</label>
+          <label class="f-option"><input type="checkbox" name="odbiorcy[]" value="Rynek krajowy"> Rynek krajowy</label>
+          <label class="f-option"><input type="checkbox" name="odbiorcy[]" value="Rynek międzynarodowy"> Rynek międzynarodowy</label>
         </div>
       </div>
 
       <div class="f-group">
-        <label>Jak klimat ma mieć logo? <span class="f-req">*</span></label>
+        <label>5. W jakim stylu ma być logo?</label>
+        <p class="f-hint">Można zaznaczyć kilka odpowiedzi.</p>
         <div class="f-options">
-          <label class="f-option"><input type="radio" name="klimat" value="nowoczesny" required> Nowoczesny</label>
-          <label class="f-option"><input type="radio" name="klimat" value="klasyczny"> Klasyczny</label>
-          <label class="f-option"><input type="radio" name="klimat" value="elegancki"> Elegancki</label>
-          <label class="f-option"><input type="radio" name="klimat" value="minimalistyczny"> Minimalistyczny</label>
+          <label class="f-option"><input type="checkbox" name="styl[]" value="Nowoczesne"> Nowoczesne</label>
+          <label class="f-option"><input type="checkbox" name="styl[]" value="Minimalistyczne"> Minimalistyczne</label>
+          <label class="f-option"><input type="checkbox" name="styl[]" value="Eleganckie"> Eleganckie</label>
+          <label class="f-option"><input type="checkbox" name="styl[]" value="Premium"> Premium</label>
+          <label class="f-option"><input type="checkbox" name="styl[]" value="Klasyczne"> Klasyczne</label>
+          <label class="f-option"><input type="checkbox" name="styl[]" value="Abstrakcyjne"> Abstrakcyjne</label>
+          <label class="f-option"><input type="checkbox" name="styl[]" value="Dosłowne (nawiązujące do działalności)"> Dosłowne (nawiązujące do działalności)</label>
+          <label class="f-option"><input type="checkbox" name="styl[]" value="Inne" data-reveal="stylInne"> Inne</label>
         </div>
-        <p class="f-error" id="klimat-err">To pole jest wymagane.</p>
-      </div>
-
-      <div class="f-group">
-        <label>Styl graficzny, który czujesz najbardziej <span class="f-req">*</span></label>
-        <div class="f-options">
-          <label class="f-option"><input type="radio" name="styl" value="klasyczny" required> Klasyczny (herbowy + kształty)</label>
-          <label class="f-option"><input type="radio" name="styl" value="typograficzny"> Typograficzny (sam napis)</label>
-          <label class="f-option"><input type="radio" name="styl" value="geometryczny"> Geometryczny (złożony z kształtów)</label>
-          <label class="f-option"><input type="radio" name="styl" value="abstrakcyjny"> Abstrakcyjny (skupiony na symbolu)</label>
-        </div>
-        <p class="f-error" id="styl-err">To pole jest wymagane.</p>
-      </div>
-
-      <div class="f-group">
-        <label>Kolory — masz jakieś preferencje? <span class="f-req">*</span></label>
-        <div class="f-options">
-          <label class="f-option"><input type="radio" name="kolory" value="jasne" required> Jasne / pastelowe</label>
-          <label class="f-option"><input type="radio" name="kolory" value="ciemne"> Ciemne / stonowane</label>
-          <label class="f-option"><input type="radio" name="kolory" value="kolorowe"> Kolorowe i żywe</label>
-          <label class="f-option"><input type="radio" name="kolory" value="brak"> Brak preferencji — zostawiam Ci dobór</label>
-          <label class="f-option"><input type="radio" name="kolory" value="inne"> Inne</label>
-        </div>
-        <p class="f-error" id="kolory-err">To pole jest wymagane.</p>
-      </div>
-
-      <div class="f-group">
-        <label>Font — która czcionka najbardziej Ci odpowiada? <span class="f-req">*</span></label>
-        <div class="f-options">
-          <label class="f-option"><input type="radio" name="font" value="bezszeryfowy-cienki" required> Bezszeryfowy — cienki (np. Gill Sans, Futura Light)</label>
-          <label class="f-option"><input type="radio" name="font" value="bezszeryfowy-gruby"> Bezszeryfowy — gruby (np. Futura Bold, Gotham)</label>
-          <label class="f-option"><input type="radio" name="font" value="szeryfowy-cienki"> Szeryfowy — cienki (np. Garamond, Didot)</label>
-          <label class="f-option"><input type="radio" name="font" value="szeryfowy-gruby"> Szeryfowy — gruby (np. Rockwell, Clarendon)</label>
-          <label class="f-option"><input type="radio" name="font" value="reczny"> Ręczny / kaligraficzny</label>
-        </div>
-        <p class="f-error" id="font-err">To pole jest wymagane.</p>
-      </div>
-
-      <div class="f-group">
-        <label for="nie_chce">Czego zdecydowanie NIE chcesz w logo? <span class="f-req">*</span></label>
-        <p class="f-hint">np. konkretne kolory, symbole, styl</p>
-        <textarea class="f-textarea" id="nie_chce" name="nie_chce" placeholder="Opisz czego chcesz uniknąć..." required></textarea>
-        <p class="f-error" id="nie_chce-err">To pole jest wymagane.</p>
-      </div>
-
-      <div class="f-group">
-        <label>Czy logo ma zawierać jakiś symbol / ikonę? <span class="f-req">*</span></label>
-        <div class="f-options">
-          <label class="f-option"><input type="radio" name="symbol" value="tak"      id="symbolTak" required> Tak</label>
-          <label class="f-option"><input type="radio" name="symbol" value="nie"> Nie</label>
-          <label class="f-option"><input type="radio" name="symbol" value="nie_wiem"> Nie mam zdania</label>
-        </div>
-        <p class="f-error" id="symbol-err">To pole jest wymagane.</p>
-        <div class="f-conditional" id="symbolGroup">
-          <label for="symbol_opis">Jaki symbol / ikona?</label>
-          <p class="f-hint">Opisz lub podaj przykład.</p>
-          <textarea class="f-textarea" id="symbol_opis" name="symbol_opis" placeholder="np. sylwetka psa, litera M, korona..."></textarea>
+        <div class="f-conditional" id="stylInne">
+          <input class="f-input" type="text" name="styl_inne" placeholder="Jaki styl?">
         </div>
       </div>
 
       <div class="f-group">
-        <label>Gdzie logo będzie najczęściej używane? <span class="f-req">*</span></label>
+        <label>6. Jaką kolorystykę preferujesz?</label>
         <div class="f-options">
-          <label class="f-option"><input type="checkbox" name="uzycie[]" value="www"> Strona WWW</label>
-          <label class="f-option"><input type="checkbox" name="uzycie[]" value="social"> Social media</label>
-          <label class="f-option"><input type="checkbox" name="uzycie[]" value="druk"> Wizytówki / druk</label>
-          <label class="f-option"><input type="checkbox" name="uzycie[]" value="inne"> Inne</label>
+          <label class="f-option"><input type="checkbox" name="kolorystyka[]" value="Jasne kolory"> Jasne kolory</label>
+          <label class="f-option"><input type="checkbox" name="kolorystyka[]" value="Ciemne kolory"> Ciemne kolory</label>
+          <label class="f-option"><input type="checkbox" name="kolorystyka[]" value="Stonowana kolorystyka"> Stonowana kolorystyka</label>
+          <label class="f-option"><input type="checkbox" name="kolorystyka[]" value="Żywe kolory"> Żywe kolory</label>
+          <label class="f-option"><input type="checkbox" name="kolorystyka[]" value="Brak preferencji"> Brak preferencji</label>
         </div>
+      </div>
+
+      <div class="f-group">
+        <label>7. Jaki styl typografii preferujesz?</label>
+        <div class="f-options">
+          <label class="f-option"><input type="checkbox" name="typografia[]" value="Cienka"> Cienka</label>
+          <label class="f-option"><input type="checkbox" name="typografia[]" value="Gruba"> Gruba</label>
+          <label class="f-option"><input type="checkbox" name="typografia[]" value="Ozdobna"> Ozdobna</label>
+          <label class="f-option"><input type="checkbox" name="typografia[]" value="Minimalistyczna"> Minimalistyczna</label>
+          <label class="f-option"><input type="checkbox" name="typografia[]" value="Bez preferencji"> Bez preferencji</label>
+        </div>
+      </div>
+
+      <div class="f-group">
+        <label>8. Jaką formę ma mieć logo?</label>
+        <div class="f-options">
+          <label class="f-option"><input type="checkbox" name="forma[]" value="Logotyp (sam napis)"> Logotyp (sam napis)</label>
+          <label class="f-option"><input type="checkbox" name="forma[]" value="Logo z sygnetem (napis + znak graficzny)"> Logo z sygnetem (napis + znak graficzny)</label>
+          <label class="f-option"><input type="checkbox" name="forma[]" value="Brak preferencji"> Brak preferencji</label>
+        </div>
+      </div>
+
+      <div class="f-group">
+        <label>9. Gdzie logo będzie najczęściej wykorzystywane?</label>
+        <p class="f-hint">Można zaznaczyć kilka odpowiedzi.</p>
+        <div class="f-options">
+          <label class="f-option"><input type="checkbox" name="uzycie[]" value="Internet / social media"> Internet / social media</label>
+          <label class="f-option"><input type="checkbox" name="uzycie[]" value="Materiały drukowane"> Materiały drukowane</label>
+          <label class="f-option"><input type="checkbox" name="uzycie[]" value="Odzież"> Odzież</label>
+          <label class="f-option"><input type="checkbox" name="uzycie[]" value="Opakowania"> Opakowania</label>
+          <label class="f-option"><input type="checkbox" name="uzycie[]" value="Reklama zewnętrzna"> Reklama zewnętrzna</label>
+          <label class="f-option"><input type="checkbox" name="uzycie[]" value="Inne" data-reveal="uzycieInne"> Inne</label>
+        </div>
+        <div class="f-conditional" id="uzycieInne">
+          <input class="f-input" type="text" name="uzycie_inne" placeholder="Gdzie jeszcze?">
+        </div>
+      </div>
+
+      <div class="f-group">
+        <label for="nie_chce">10. Czego zdecydowanie nie powinno być w projekcie?</label>
+        <textarea class="f-textarea" id="nie_chce" name="nie_chce" placeholder="np. konkretne kolory, symbole, styl..."></textarea>
+      </div>
+
+      <div class="f-group">
+        <label for="inspiracje">11. Czy masz inspiracje dotyczące logo? Jeśli tak, prześlij linki.</label>
+        <textarea class="f-textarea" id="inspiracje" name="inspiracje" placeholder="Wklej linki do logotypów, które Ci się podobają..."></textarea>
       </div>
 
       <div class="f-submit-wrap">
-        <button type="submit" class="btn btn-filled" id="submitBtn">Wyślij analizę &nbsp;→</button>
+        <button type="submit" class="btn btn-filled" id="submitBtn">Wyślij brief &nbsp;→</button>
       </div>
     </form>
 
