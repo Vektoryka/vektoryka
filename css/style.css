@@ -1206,6 +1206,24 @@ footer {
   color: var(--muted);
 }
 
+.footer-credit {
+  margin-top: .6rem;
+  font-size: .68rem;
+  color: var(--muted);
+}
+
+.footer-credit a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition);
+}
+
+@media (hover: hover) {
+  .footer-credit a:hover {
+    color: var(--accent);
+  }
+}
+
 .f-col h5 {
   font-size: .6rem;
   font-weight: 700;
