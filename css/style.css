@@ -758,6 +758,148 @@ h2 {
   }
 }
 
+#uslugi {
+  border-top: 1px solid var(--border);
+}
+
+.sec-intro {
+  font-size: .9rem;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 44ch;
+}
+
+.uslugi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .uslugi-grid {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.25rem;
+  }
+}
+
+.u-card {
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+  padding: 2rem 1.75rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+@media (min-width: 900px) {
+  .u-card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+  }
+}
+
+@media (hover: hover) {
+  .u-card:hover {
+    border-color: rgba(58, 121, 169, .4);
+    border-top-color: var(--accent);
+  }
+}
+
+.u-num {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--accent);
+}
+
+.u-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.u-card > p {
+  font-size: .86rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.u-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.u-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.u-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.u-partner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--accent);
+}
+
+.u-partner p {
+  font-size: .88rem;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 78ch;
+}
+
+.u-partner strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.u-partner a:not(.btn),
+.om-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .u-partner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    padding: 2rem 2.25rem;
+  }
+
+  .u-partner .btn {
+    flex-shrink: 0;
+  }
+}
+
 .analiza-banner {
   background: var(--bg2);
   border-top: 1px solid var(--border);
